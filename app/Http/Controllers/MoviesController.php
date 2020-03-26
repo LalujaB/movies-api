@@ -36,9 +36,6 @@ class MoviesController extends Controller
      */
     public function store(Request $request)
     {
-//        if (!$request->has(['title', 'director', 'imageUrl', 'duration', 'releaseDate', 'genre'])) {
-//            abort(400);
-//        }
 
         $movie = new Movie();
 
@@ -85,9 +82,6 @@ class MoviesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        if (!$request->has(['title', 'director', 'imageUrl', 'duration', 'releaseDate', 'genre'])) {
-            abort(400);
-        }
 
         $movie = Movie::find($id);
 
